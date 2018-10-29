@@ -5,7 +5,7 @@ dovrà diventare gradualmente rosso quando
  l'utente e on hover con il mouse  */
 
 .ex-1-square {
-  transition:1 s;
+  transition:1s;
 }
 
 .ex-1-square:hover {
@@ -53,14 +53,104 @@ Il nostro quadratino diventerà un
  pochino più grande on hover,
  e più piccolo on click */
 
-.ex-5-square {
-  transition: 2s linear;
+.ex-5-square:hover {
+
 }
 
 .ex-5-square:hover {
-  
+
 }
 
-.ex-5-square:active {
+/* ESERCIZIO 6
+L'immagine on hover diventerà
+ bianco e nero
+ */
 
+.ex-6-img:hover {
+  filter: grayscale();
+}
+
+/* ESERCIZIO 7
+Come sopra, aggiungiamo
+un effetto (anzi due :-P)
+all'immagine, ma questa volta
+cambierà gradualmente */
+
+.ex-7-img {
+  transition: 1s;
+}
+
+.ex-7-img:hover {
+  filter: saturate(0.5) sepia(0.5);
+}
+
+/* ESERCIZIO 8
+Osiamo: due effetti e
+bordi arrotondati*/
+
+.ex-8-img{
+  transition: 2s;
+}
+
+.ex-8-img:hover {
+border-radius: 25px;
+filter: saturate(30%) grayscale(60%);
+}
+
+/* ESRCIZIO 11
+Come un caricamento: L'icona gira
+e gira ancora. Il primo che usa
+fa-spin ha perso.*/
+
+.ex-10-icon {
+  animation: infiniterotation 1s infinite linear;
+}
+
+@keyframes infiniterotation {
+   100% {
+     transform: rotate(360deg);
+   }
+}
+
+/* ESERCIZIO 11
+  Simile all'icona sopra.
+  On hover questa volta gira in
+  senso orario fino ad arrivare
+  a 3/4 e poi torna indietro velocemente
+*/
+
+.ex-11-icon:hover {
+  animation: rotation 2s linear;
+}
+
+@keyframes rotation {
+   75% {
+     transform: rotate(270deg);
+   }
+}
+
+/* ESERCIZIO 12
+Anima il bottone, sposta
+quello spazio bianco
+*/
+
+.ex-12-button:hover>.ex-12-top-white {
+  animation: top12Move 1.5s linear;
+
+  }
+
+.ex-12-button:hover>.ex-12-bottom-white {
+  animation: bottom12Move 1.5s linear;
+}
+
+@keyframes top12Move {
+  50% {
+    left: 65%;
+  }
+}
+
+@keyframes bottom12Move {
+  50% {
+    right: 65%;
+  }
 }
