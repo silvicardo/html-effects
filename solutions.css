@@ -53,12 +53,20 @@ Il nostro quadratino diventerà un
  pochino più grande on hover,
  e più piccolo on click */
 
-.ex-5-square:hover {
-
+.ex-5-square {
+  transition: 1s linear;
 }
 
 .ex-5-square:hover {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+}
 
+.ex-5-square:active {
+  margin: 40px;
+  width: 20px;
+  height: 20px;
 }
 
 /* ESERCIZIO 6
@@ -136,7 +144,6 @@ quello spazio bianco
 
 .ex-12-button:hover>.ex-12-top-white {
   animation: top12Move 1.5s linear;
-
   }
 
 .ex-12-button:hover>.ex-12-bottom-white {
@@ -162,7 +169,6 @@ Facciamogli fare il giro completo
 
 .ex-13-button:hover>.ex-13-top-white {
   animation: top13Move 2s linear;
-
   }
 
 .ex-13-button:hover>.ex-13-bottom-white {
@@ -170,6 +176,7 @@ Facciamogli fare il giro completo
 }
 
 @keyframes top13Move {
+
   20% {
     left: 75%;
     top:-10px;
@@ -192,6 +199,7 @@ Facciamogli fare il giro completo
 }
 
 @keyframes bottom13Move {
+
   20% {
     right: 75%;
     bottom:-10px;
