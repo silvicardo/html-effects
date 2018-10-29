@@ -154,3 +154,62 @@ quello spazio bianco
     right: 65%;
   }
 }
+
+
+/* ESERCIZIO 13
+Facciamogli fare il giro completo
+*/
+
+.ex-13-button:hover>.ex-13-top-white {
+  animation: top13Move 2s linear;
+
+  }
+
+.ex-13-button:hover>.ex-13-bottom-white {
+  animation: bottom13Move 2s linear;
+}
+
+@keyframes top13Move {
+  20% {
+    left: 75%;
+    top:-10px;
+  }
+
+  40% {
+    left:80%;
+    top:60px;
+  }
+
+  65% {
+    left:0%;
+    top: 60px;
+  }
+
+  85% {
+    left: -15%;
+    top: -10px;
+  }
+}
+
+@keyframes bottom13Move {
+  20% {
+    right: 75%;
+    bottom:-10px;
+  }
+
+  40% {
+    right:80%;
+    bottom:60px;
+  }
+
+  65% {
+    right:0%;
+    bottom: 60px;
+  }
+
+  85% {
+    right: -30%;
+    bottom: -10px;
+  }
+
+}
